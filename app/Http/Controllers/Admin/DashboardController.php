@@ -10,7 +10,7 @@ class DashboardController extends Controller
 {
   public function index()
   {
-    $employees = Karyawan::orderBy('tgl_bergabung', 'desc')->limit(3)->get();
+    $employees = Karyawan::orderBy('tgl_bergabung', 'asc')->limit(3)->get();
     return view('pages.admin.dashboard', compact('employees'));
   }
 }

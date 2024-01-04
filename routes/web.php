@@ -19,7 +19,8 @@ use App\Http\Controllers\Admin\CutiController as AdminCutiController;
 */
 
 Route::get('/', function () {
-  return view('welcome');
+  // return view('welcome');
+  return redirect()->route('admin.dashboard');
 });
 
 Auth::routes();
